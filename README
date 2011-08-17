@@ -1,0 +1,7 @@
+update to lin 87: casueing index error
+
+okay on line 87 you will find a filter value '240'
+87         'thumbnail_url': filter(lambda x: x.attrib['height'] == '240',
+
+it's a hack to find the thumbnail - you-tube have increased there thumb size to '360'
+87         'thumbnail_url': filter(lambda x: x.attrib['height'] == '360',

@@ -84,7 +84,7 @@ class YoutubeSyncr:
 	    'url': filter(lambda x: x.attrib['rel'] == 'alternate',
 			  result.findall('{%s}link' %
 					 ATOM_NS))[0].attrib['href'],
-	    'thumbnail_url': filter(lambda x: x.attrib['height'] == '240',
+	    'thumbnail_url': filter(lambda x: x.attrib['height'] == '360',
 				    result.findall('{%s}group/{%s}thumbnail' % (MRSS_NS, MRSS_NS)))[0].attrib['url'],
 	    'length': result.find('{%s}group/{%s}duration' %
 				  (MRSS_NS, YOUTUBE_NS)).attrib['seconds'],
